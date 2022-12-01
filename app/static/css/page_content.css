@@ -1,0 +1,50 @@
+body{
+    background:url('overlay.png'), url('Wolfplaza.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    color: black;
+}
+
+/*.sortable {
+  border: 2px;
+  border-collapse: collapse;
+  width: 100;
+  padding: 200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Style the search field */
+form.filter input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 90%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.filter button {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.filter button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.filter::after {
+  content: "";
+  clear: both;
+  display: table;
+}

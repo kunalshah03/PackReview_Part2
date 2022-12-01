@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='/css/page_content.css')}}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
+        <form class="filter" action="/pageContentPost" method="post">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <br><br>
+        <div style="background-color: white;">
+            <table class="sortable table table-hover">
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Job Description</th>
+                        <th>Department</th>
+                        <th>Location(s)</th>
+                        <th>Hourly Pay</th>
+                        <th>Employee Benefits</th>
+                        <th>Review</th>
+                        <th>Rating</th>
+                        <th>Recommendation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in entries %}
+
+                    <tr>
+                        <td><strong>{{ entry.job_title }}</strong></td>
+                        <td>{{ entry.job_description }}</td>
+                        <td>{{ entry.department }}</td>
+                        <td>{{ entry.locations }}</td>
+                        <td>{{ entry.hourly_pay }}</td>
+                        <td>{{ entry.benefits }}</td>
+                        <td>{{ entry.review }}</td>
+                        <td>{{ entry.rating }}</td>
+                        <td>{{ entry.recommendation }}</td>
+                        <!-- <td>
+                            <a class="{{ 'btn btn-success' if entry.status else 'btn btn-dark'}}"
+                               href="/turn/{{ entry.id }}">
+                                Turn Status
+                            </a>
+                            <a class="btn btn-danger"
+                               href="/delete/{{ entry.id }}">
+                                Delete
+                            </a>
+                            <a class="btn btn-info"
+                               href="/update/{{ entry.id }}">
+                                Edit
+                            </a>
+                        </td> -->
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+            </table>
+        </div>
+
+{% endblock %}
