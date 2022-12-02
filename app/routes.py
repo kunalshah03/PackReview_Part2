@@ -12,7 +12,6 @@ def intializeDB():
     db = get_DB()
     usersDb = db.Users
     jobsDB = db.Jobs
-    
 
 def process_jobs(job_list):
     processed = list()
@@ -25,16 +24,31 @@ def get_all_jobs():
     all_jobs = list(jobsDB.find())
     return process_jobs(all_jobs)
 
+
+
+def get_my_jobs(username):
+    intializeDB()
+    user = usersDb.find_one({"username": username})
+    if user == None:
+        pass
+
+    reviews = user['reviews']
+    return process_jobs(jobsDB.find({"_id": {'$in': reviews}}))
+
+#create job review
 @app.route('/review')
 def review():
     """
     An API for the user review page, which helps the user to add reviews
     """
     intializeDB()
+    if not ('username' in session.keys() and session['username']):
+        return redirect("/")
     entries = get_all_jobs()
     return render_template('review-page.html', entries=entries)
 
 
+#view all
 @app.route('/pageContent')
 def page_content():
     """An API for the user to view all the reviews entered"""
@@ -42,6 +56,16 @@ def page_content():
     entries = get_all_jobs()
     return render_template('page_content.html', entries=entries)
 
+
+#view all
+@app.route('/myjobs')
+def myjobs():
+    """An API for the user to view all the reviews created by them"""
+    intializeDB()
+    entries = get_my_jobs(session['username'])
+    return render_template('myjobs.html', entries=entries)
+
+#search
 @app.route('/pageContentPost', methods=['POST'])
 def page_content_post():
     """An API for the user to view specific reviews depending on the job title"""
@@ -69,6 +93,11 @@ def add():
     """An API to help users add their reviews and store it in the database"""
 
     intializeDB()
+    user = usersDb.find_one({"username": session['username']})
+    if user == None:
+        pass
+    reviews = user['reviews']
+
     if request.method == 'POST':
         form = request.form
 
@@ -84,12 +113,15 @@ def add():
                 "review": form.get('review'),
                 "rating": form.get('rating'),
                 "recommendation": form.get('recommendation'),
+                "author": session['username']
             }
 
         if jobsDB.find_one({'_id': job['_id']})== None:
             jobsDB.insert_one(job)
+            reviews.append(job['_id'])
+            usersDb.update_one({"username": session['username']}, {"$set": {"reviews": reviews}})
 
-        return redirect('/')
+    return redirect('/')
 
 @app.route('/logout')
 def logout():
