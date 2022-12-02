@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='/css/page_content.css')}}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+<div class="card mx-auto shadow-2-strong bg-white rounded" style="width: 60%; margin: 50px; padding: 50px;">
+    <h3>Job Review Information</h3>
+    <br>
+    <table class="table table-hover">
+        <tbody>
+          <tr>
+            <td>Job Title</td>
+            <td>{{ entry.title }}</td>
+          </tr>
+          <tr>
+            <td>Company</td>
+            <td>{{ entry.company }}</td>
+          </tr>
+          <tr>
+            <td>Job Description</td>
+            <td>{{ entry.description }}</td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td>{{ entry.locations }}</td>
+          </tr>
+          <tr>
+            <td>Hourly Pay</td>
+            <td>{{ entry.hourly_pay }}$</td>
+          </tr>
+          <tr>
+            <td>Employee Benefits</td>
+            <td>{{ entry.benefits }}</td>
+          </tr>
+          <tr>
+            <td>Review</td>
+            <td>{{ entry.review }}</td>
+          </tr>
+          <tr>
+            <td>Rating</td>
+            <td>{{ entry.rating }}/5</td>
+          </tr>
+          <tr>
+            <td>Recommendation</td>
+            <td>{{ entry.recommendation }}/10</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      </div>
+{% endblock %}
