@@ -1,15 +1,18 @@
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, session
 from app import app, db
 from app.models import Reviews
 from utils import get_DB
 
 jobsDB  = None
+usersDb = None
 db = None
 
 def intializeDB():
-    global jobsDB, db
+    global jobsDB, db, usersDb
     db = get_DB()
+    usersDb = db.Users
     jobsDB = db.Jobs
+    
 
 def process_jobs(job_list):
     processed = list()
@@ -37,7 +40,6 @@ def page_content():
     """An API for the user to view all the reviews entered"""
     intializeDB()
     entries = get_all_jobs()
-    print(entries)
     return render_template('page_content.html', entries=entries)
 
 @app.route('/pageContentPost', methods=['POST'])
@@ -59,8 +61,7 @@ def page_content_post():
 def home():
     """An API for the user to be able to access the homepage through the navbar"""
     intializeDB()
-    entries = get_all_jobs()
-    return render_template('index.html', entries=entries)
+    return render_template('index.html')
 
 
 @app.route('/add', methods=['POST'])
@@ -89,6 +90,58 @@ def add():
             jobsDB.insert_one(job)
 
         return redirect('/')
+
+@app.route('/logout')
+def logout():
+   session.pop('username', None)
+   return redirect('/')
+
+@app.route("/login", methods=["POST", "GET"])
+def login():
+
+    intializeDB()
+    if 'username' in session.keys() and session['username']:
+        return redirect("/")
+
+    if request.method == "POST":
+        username = request.form.get("username")
+        user = usersDb.find_one({"username": username})
+        passw =  request.form.get("password")
+
+        if user and user["password"] == passw:
+            session["username"] = username
+            return redirect("/")
+        else:
+            return redirect("/")
+
+    return render_template("login.html")
+
+@app.route("/signup", methods=["POST", "GET"])
+def signup():
+
+    intializeDB()
+    if 'username' in session.keys() and session['username']:
+        print("User ", session['username']," already logged in")
+        return redirect("/")
+        
+    if request.method == "POST":
+        username = request.form.get("username")
+        user = usersDb.find_one({"username": username})
+        passw =  request.form.get("password")
+
+        #new user
+        if not user:
+            user = {
+                "username": username,
+                "password": passw,
+                "reviews": list()
+            }
+            usersDb.insert_one(user)
+            
+        session["username"] = username
+        return redirect("/")
+
+    return render_template("signup.html")
 
 # @app.route('/update/<int:id>')
 # def updateRoute(id):
