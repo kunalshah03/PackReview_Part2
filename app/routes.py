@@ -1,32 +1,56 @@
 from flask import render_template, request, redirect
 from app import app, db
 from app.models import Reviews
+from utils import get_DB
+
+jobsDB  = None
+db = None
+
+def intializeDB():
+    global jobsDB, db
+    db = get_DB()
+    jobsDB = db.Jobs
+
+def process_jobs(job_list):
+    processed = list()
+    for job in job_list:
+        job['id'] = job.pop('_id')
+        processed.append(job)
+    return processed
+
+def get_all_jobs():
+    all_jobs = list(jobsDB.find())
+    return process_jobs(all_jobs)
 
 @app.route('/review')
 def review():
     """
     An API for the user review page, which helps the user to add reviews
     """
-    entries = Reviews.query.all()
+    intializeDB()
+    entries = get_all_jobs()
     return render_template('review-page.html', entries=entries)
 
 
 @app.route('/pageContent')
 def page_content():
     """An API for the user to view all the reviews entered"""
-    entries = Reviews.query.all()
+    intializeDB()
+    entries = get_all_jobs()
+    print(entries)
     return render_template('page_content.html', entries=entries)
 
 @app.route('/pageContentPost', methods=['POST'])
 def page_content_post():
     """An API for the user to view specific reviews depending on the job title"""
+    intializeDB()
     if request.method == 'POST':
         form = request.form
         search_title = form.get('search')
         if search_title.strip() == '':
-            entries = Reviews.query.all()
+            entries = get_all_jobs()
         else:
-            entries = Reviews.query.filter_by(job_title=search_title)
+            entries = process_jobs(jobsDB.find({"job_title": "/"+search_title+"/"}))
         return render_template('page_content.html', entries=entries)
 
 @app.route('/')
@@ -34,28 +58,36 @@ def page_content_post():
 
 def home():
     """An API for the user to be able to access the homepage through the navbar"""
-    entries = Reviews.query.all()
+    intializeDB()
+    entries = get_all_jobs()
     return render_template('index.html', entries=entries)
 
 
 @app.route('/add', methods=['POST'])
 def add():
     """An API to help users add their reviews and store it in the database"""
+
+    intializeDB()
     if request.method == 'POST':
         form = request.form
-        title = form.get('job_title')
-        description = form.get('job_description')
-        department = form.get('department')
-        locations = form.get('locations')
-        hourly_pay = form.get('hourly_pay')
-        benefits = form.get('benefits')
-        review = form.get('review')
-        rating = form.get('rating')
-        recommendation = form.get('recommendation')
 
-        entry = Reviews(job_title = title, job_description = description, department = department, locations = locations, hourly_pay = hourly_pay, benefits = benefits, review=review, rating=rating,recommendation = recommendation)
-        db.session.add(entry)
-        db.session.commit()
+        job = {
+            "_id": form.get('job_title') + "_" + form.get('company') + "_" + form.get('locations'),
+                "title": form.get('job_title'),
+                "company": form.get('company'),
+                "description": form.get('job_description'),
+                "locations": form.get('locations'),
+                "department": form.get('department'),
+                "hourly_pay":   form.get('hourly_pay'),
+                "benefits": form.get('benefits'),
+                "review": form.get('review'),
+                "rating": form.get('rating'),
+                "recommendation": form.get('recommendation'),
+            }
+
+        if jobsDB.find_one({'_id': job['_id']})== None:
+            jobsDB.insert_one(job)
+
         return redirect('/')
 
 # @app.route('/update/<int:id>')
