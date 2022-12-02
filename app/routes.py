@@ -183,3 +183,18 @@ def view(id):
     jobReview = jobsDB.find_one({"_id": id})
     jobReview['id'] = jobReview.pop('_id')
     return render_template("view.html", entry=jobReview)
+
+@app.route('/delete/<id>')
+def delete(id):
+    """An API to help delete a review"""
+    intializeDB()
+    user = usersDb.find_one({"username": session['username']})
+    if user == None:
+        pass
+
+    reviews = user['reviews']
+    reviews.remove(id)
+    usersDb.update_one({"username": session['username']}, {"$set": {"reviews": reviews}})
+
+    jobsDB.delete_one( {"_id":id })
+    return redirect("/myjobs")
