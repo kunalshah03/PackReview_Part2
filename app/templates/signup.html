@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <title>Login</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}"/>
+</head>
+<body>
+
+<section>
+    <div class="rt-container">
+          <div class="col-rt-12">
+              <div class="Scriptcontent">
+
+<div class="feedback">
+<form method="post" action="/signup">
+<h1>Sign Up for PackReview Portal
+</h1>
+    <hr class="survey-hr">
+        <label for="m_3189847521540640526commentText">Enter a new username:</label><br/><br/>
+        <input type="text" cols="75" name="username" rows="5" style="100%" size = "80%" required></input><br>
+    <br>
+
+    <hr class="survey-hr">
+        <label for="m_3189847521540640526commentText">Enter a password:</label><br/><br/>
+        <input type="password" cols="75" name="password" rows="5" style="100%" size = "80%" required></input><br>
+    <br>
+
+   
+      <div class="clear"></div>
+    <input style="background:#43a7d5;color:#fff;padding:12px;border:0" type="submit" value="Sign Up">&nbsp;
+    </form>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</body>
+</html>
+
+{% endblock %}
