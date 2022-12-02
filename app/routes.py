@@ -125,12 +125,13 @@ def add():
 
 @app.route('/logout')
 def logout():
+   """An API to help users logout"""
    session.pop('username', None)
    return redirect('/')
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
-
+    """An API to help users login"""
     intializeDB()
     if 'username' in session.keys() and session['username']:
         return redirect("/")
@@ -150,7 +151,7 @@ def login():
 
 @app.route("/signup", methods=["POST", "GET"])
 def signup():
-
+    """An API to help users signup"""
     intializeDB()
     if 'username' in session.keys() and session['username']:
         print("User ", session['username']," already logged in")
@@ -175,45 +176,10 @@ def signup():
 
     return render_template("signup.html")
 
-# @app.route('/update/<int:id>')
-# def updateRoute(id):
-#     if not id or id != 0:
-#         entry = Reviews.query.get(id)
-#         if entry:
-#             return render_template('update.html', entry=entry)
-#
-#
-# @app.route('/update/<int:id>', methods=['POST'])
-# def update(id):
-#     if not id or id != 0:
-#         entry = Reviews.query.get(id)
-#         if entry:
-#             form = request.form
-#             title = form.get('job_title')
-#             description = form.get('job_description')
-#             department = form.get('department')
-#             locations = form.get('locations')
-#             hourly_pay = form.get('hourly_pay')
-#             benefits = form.get('benefits')
-#             review = form.get('review')
-#             rating = form.get('rating')
-#             entry.title = title
-#             entry.description = description
-#             entry.department = department
-#             entry.locations = locations
-#             entry.hourly_pay = hourly_pay
-#             entry.benefits = benefits
-#             entry.review = review
-#             entry.rating = rating
-#             db.session.commit()
-#         return redirect('/')
-#
-#
-# @app.route('/delete/<int:id>')
-# def delete(id):
-#     if not id or id != 0:
-#         entry = Reviews.query.get(id)
-#         if entry:
-#             db.session.delete(entry)
-#             db.session.commit()
-#         return redirect('/')
+@app.route('/view/<id>')
+def view(id):
+    """An API to help view review information"""
+    intializeDB()
+    jobReview = jobsDB.find_one({"_id": id})
+    jobReview['id'] = jobReview.pop('_id')
+    return render_template("view.html", entry=jobReview)
