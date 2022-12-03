@@ -8,6 +8,46 @@
     .clickable-row{
         cursor: pointer;
     }
+    label {
+    background-color:black;
+    border: 1px #dadada solid;
+    color:white;
+    font-family: Consolas, Baskerville, 'Segoe UI', sans-serif;
+}
+
+    .multiselect {
+  width: 200px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
 </style>
 <script>
     jQuery(document).ready(function($) {
@@ -15,11 +55,98 @@
         window.location = $(this).data("href");
     });
 });
+
+var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
 </script>
 
         <form class="filter" action="/pageContentPost" method="post">
           <input type="text" placeholder="Search.." name="search">
           <button type="submit"><i class="fa fa-search"></i></button>
+<!--            <div style="display:block">-->
+<!--            <div class="multiselect">-->
+<!--    <div class="selectBox" onclick="showCheckboxes()">-->
+<!--      <select>-->
+<!--        <option>Location</option>-->
+<!--      </select>-->
+<!--      <div class="overSelect"></div>-->
+<!--    </div>-->
+<!--    <div id="checkboxes">-->
+
+<!--                <input type="checkbox" name= "location_filter" value="Raleigh, NC"> Raleigh, NC<br>-->
+<!--                <input type="checkbox" name= "location_filter" value="California"> California<br>-->
+
+<!--    </div>-->
+
+<!--                <select>-->
+<!--        <option>Company</option>-->
+<!--      </select>-->
+<!--      <div class="overSelect"></div>-->
+
+<!--    <div id="checkboxes2">-->
+
+<!--                {% for entry in company_filter_entries %}&ndash;&gt;-->
+<!--                <input type="checkbox" name= "company_filter" value="{{entry}}"> {{entry}}<br>-->
+<!--                {% endfor %}-->
+
+<!--    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<div style="display:block;">
+    <div class="multiselect">-->
+    <div class="selectBox" onclick="showCheckboxes()">
+        <select>
+            <option>Location</option>
+        </select>
+            <input type="checkbox" name= "location_filter" value="Raleigh, NC"><label> Raleigh, NC</label><br>
+        <input type="checkbox" name= "location_filter" value="California"><label> California</label>
+
+
+        <select>
+            <option>Company</option>
+
+       </select>
+        {% for entry in company_filter_entries %}
+        <input type="checkbox" name= "company_filter" value="{{entry}}"> <label>{{entry}}</label><br>
+                {% endfor %}
+
+   </div>
+    </div>
+</div>
+
+
+
+<!--            <div>-->
+
+<!--                {% for entry in dept_filter_entries %}-->
+<!--                <input type="checkbox" name= "dept_filter" value="{{entry}}"> {{entry}}-->
+<!--                {% endfor %}-->
+
+<!--            </div>-->
+<!--            <div>-->
+<!--                {% for entry in location_filter_entries %}-->
+<!--                <input type="checkbox" name= "location_filter" value="{{entry}}"> {{entry}}-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                {% for entry in title_filter_entries %}-->
+<!--                <input type="checkbox" name= "title_filter" value="{{entry}}"> {{entry}}-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+
+
         </form>
         <br><br>
         <div style="background-color: white;">
@@ -52,21 +179,21 @@
                         <td>{{ entry.review }}</td>
                         <td>{{ entry.rating }}/5</td>
                         <td>{{ entry.recommendation }}/10</td>
-                        <!-- <td>
-                            <a class="{{ 'btn btn-success' if entry.status else 'btn btn-dark'}}"
-                               href="/turn/{{ entry.id }}">
-                                Turn Status
-                            </a>
-                            <a class="btn btn-danger"
-                               href="/delete/{{ entry.id }}">
-                                Delete
-                            </a>
-                            <a class="btn btn-info"
-                               href="/update/{{ entry.id }}">
-                                Edit
-                            </a>
-                        </td> -->
-                    </tr>
+<!--                         <td>-->
+<!--                            <a class="{{ 'btn btn-success' if entry.status else 'btn btn-dark'}}"-->
+<!--                               href="/turn/{{ entry.id }}">-->
+<!--                                Turn Status-->
+<!--                            </a>-->
+<!--                            <a class="btn btn-danger"-->
+<!--                               href="/delete/{{ entry.id }}">-->
+<!--                                Delete-->
+<!--                            </a>-->
+<!--                            <a class="btn btn-info"-->
+<!--                               href="/update/{{ entry.id }}">-->
+<!--                                Edit-->
+<!--                            </a>-->
+<!--                        </td>-->
+<!--                    </tr>-->
                     {% endfor %}
                     </tbody>
             </table>
