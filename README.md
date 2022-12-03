@@ -47,3 +47,6 @@ The rules listed below are to be followed by the ones who will be contributing t
 ### Slack Channel Screenshot
 
 ![alt text](https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/blob/main/Data/slack_channel.png)
+
+### Video demonstrating the existing functionalities
+![alt text](https://github.com/kunalshah03/PackReview_Part2/blob/main/Data/86IWSAZ1VSIZ7ASI.mp4)
