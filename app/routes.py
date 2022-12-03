@@ -1,4 +1,5 @@
 from flask import render_template, request, redirect, session
+from flask_restful import Resource, reqparse
 from app import app, db
 from app.models import Reviews
 from utils import get_DB
@@ -6,6 +7,7 @@ from utils import get_DB
 jobsDB  = None
 usersDb = None
 db = None
+
 
 def intializeDB():
     global jobsDB, db, usersDb
