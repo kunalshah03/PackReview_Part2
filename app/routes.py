@@ -54,7 +54,11 @@ def page_content():
     """An API for the user to view all the reviews entered"""
     intializeDB()
     entries = get_all_jobs()
-    return render_template('page_content.html', entries=entries)
+    dept_filter_entries = jobsDB.distinct("department")
+    location_filter_entries = jobsDB.distinct("locations")
+    title_filter_entries = jobsDB.distinct("title")
+    company_filter_entries = jobsDB.distinct("company")
+    return render_template('page_content.html', entries=entries,dept_filter_entries=dept_filter_entries,location_filter_entries=location_filter_entries,company_filter_entries=company_filter_entries)
 
 
 #view all
@@ -73,11 +77,50 @@ def page_content_post():
     if request.method == 'POST':
         form = request.form
         search_title = form.get('search')
+        print("search is",search_title)
+        filter_entries= get_all_jobs()
         if search_title.strip() == '':
             entries = get_all_jobs()
         else:
-            entries = process_jobs(jobsDB.find({"job_title": "/"+search_title+"/"}))
-        return render_template('page_content.html', entries=entries)
+            print("s entered")
+            entries = process_jobs(jobsDB.find({"title": "/"+search_title+"/"}))
+        dept_filter_entries = jobsDB.distinct("department")
+        location_filter_entries = jobsDB.distinct("locations")
+        title_filter_entries = jobsDB.distinct("title")
+        company_filter_entries = jobsDB.distinct("company")
+
+        dept_filter_title = form.getlist("dept_filter")
+        location_filter_title = form.getlist("location_filter")
+        title_filter_title = form.getlist("title_filter")
+        company_filter_title = form.getlist("company_filter")
+        # li={"department":dept_filter_title,"locations":location_filter_title,"title":title_filter_title,"company": company_filter_title}
+        # for k,v in li.items():
+        #     if v not null:
+        #         entries = process_jobs(jobsDB.find({k:{"$in":v}))
+        # header_dict={}
+        # if title_filter_title:
+        #     header_dict["title"]:"{$in: title_filter_title}"
+        # if company_filter_title:
+        #     header_dict["company"]:"{$in: company_filter_title}"
+        # if dept_filter_title:
+        #     header_dict["department"]:"{$in: dept_filter_title}"
+        # if location_filter_title:
+        #     header_dict["locations"]:"{$in: location_filter_title}"
+        # entries=process_jobs(jobsDB.find(header_dict))
+        # if title_filter_title:
+        #     entries = process_jobs(jobsDB.find({"title": {"$in": title_filter_title}}))
+
+        if company_filter_title and location_filter_title:
+            print("dept filter is", dept_filter_title)
+            entries = process_jobs(jobsDB.find({"company":  { "$in": company_filter_title},"locations":  { "$in": location_filter_title} }))
+        elif location_filter_title and not company_filter_title:
+            print("location filter is", location_filter_title)
+            entries = process_jobs(jobsDB.find({"locations":  { "$in": location_filter_title} }))
+        elif company_filter_title and not location_filter_title:
+            print("location filter is", location_filter_title)
+            entries = process_jobs(jobsDB.find({"company":  { "$in": company_filter_title} }))
+
+        return render_template('page_content.html', entries=entries,dept_filter_entries=dept_filter_entries,location_filter_entries=location_filter_entries,company_filter_entries=company_filter_entries)
 
 @app.route('/')
 @app.route('/home')
