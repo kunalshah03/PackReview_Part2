@@ -112,17 +112,17 @@ def page_content_post():
         # if title_filter_title:
         #     entries = process_jobs(jobsDB.find({"title": {"$in": title_filter_title}}))
 
-        if company_filter_title and location_filter_title:
+        if company_filter_title and dept_filter_title:
             print("dept filter is", dept_filter_title)
-            entries = process_jobs(jobsDB.find({"company":  { "$in": company_filter_title},"locations":  { "$in": location_filter_title} }))
-        elif location_filter_title and not company_filter_title:
-            print("location filter is", location_filter_title)
-            entries = process_jobs(jobsDB.find({"locations":  { "$in": location_filter_title} }))
-        elif company_filter_title and not location_filter_title:
-            print("location filter is", location_filter_title)
+            entries = process_jobs(jobsDB.find({"company":  { "$in": company_filter_title},"department":  { "$in": dept_filter_title} }))
+        elif dept_filter_title and not company_filter_title:
+            print("location filter is", dept_filter_title)
+            entries = process_jobs(jobsDB.find({"department":  { "$in": dept_filter_title} }))
+        elif company_filter_title and not dept_filter_title:
+            print("company filter is", company_filter_title)
             entries = process_jobs(jobsDB.find({"company":  { "$in": company_filter_title} }))
 
-        return render_template('page_content.html', entries=entries,dept_filter_entries=dept_filter_entries,location_filter_entries=location_filter_entries,company_filter_entries=company_filter_entries)
+        return render_template('page_content.html', entries=entries, dept_filter_entries=dept_filter_entries, location_filter_entries=location_filter_entries, company_filter_entries=company_filter_entries)
 
 @app.route('/')
 @app.route('/home')
