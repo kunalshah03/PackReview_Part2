@@ -49,4 +49,5 @@ The rules listed below are to be followed by the ones who will be contributing t
 ![alt text](https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/blob/main/Data/slack_channel.png)
 
 ### Video demonstrating the existing functionalities
-![alt text](https://github.com/kunalshah03/PackReview_Part2/blob/main/Data/86IWSAZ1VSIZ7ASI.mp4)
+![alt text](https://user-images.githubusercontent.com/60925790/205466046-2b583692-3d3e-428d-b13f-aa0da9a51bce.mp4)
+
