@@ -158,7 +158,8 @@ def add():
                 "review": form.get('review'),
                 "rating": form.get('rating'),
                 "recommendation": form.get('recommendation'),
-                "author": session['username']
+                "author": session['username'],
+                "upvote": 0
             }
 
         if jobsDB.find_one({'_id': job['_id']})== None:
@@ -228,6 +229,28 @@ def view(id):
     jobReview = jobsDB.find_one({"_id": id})
     jobReview['id'] = jobReview.pop('_id')
     return render_template("view.html", entry=jobReview)
+
+@app.route('/upvote/<id>')
+def upvote(id):
+    """An API to update upvote information"""
+    intializeDB()
+    jobReview = jobsDB.find_one({"_id": id})
+    upvote = jobReview['upvote']
+    upvote+=1
+    jobsDB.update_one({"_id": id}, {"$set": {"upvote": upvote}})
+    return redirect("/view/"+id)
+
+@app.route('/downvote/<id>')
+def downvote(id):
+    """An API to update upvote information"""
+    intializeDB()
+    jobReview = jobsDB.find_one({"_id": id})
+    upvote = jobReview['upvote']
+    upvote-=1
+    jobsDB.update_one({"_id": id}, {"$set": {"upvote": upvote}})
+    return redirect("/view/"+id)
+
+
 
 @app.route('/delete/<id>')
 def delete(id):

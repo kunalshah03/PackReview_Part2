@@ -48,3 +48,35 @@ form.filter::after {
   clear: both;
   display: table;
 }
+
+.arrow-up {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  background-color: #fff;
+  padding: 0;
+  border: 0;
+  outline: none;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid green;
+}
+
+.arrow-down {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  background-color: #fff;
+  padding: 0;
+  border: 0;
+  outline: none;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid red;
+}
+
+.vote {
+  /* width: 100px; */
+  margin: 10px;
+  /* height: 100px; */
+}
