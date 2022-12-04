@@ -4,6 +4,21 @@
 <link rel="stylesheet" href="{{url_for('static', filename='/css/page_content.css')}}"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
+
+<script>
+  jQuery(document).ready(function($) {
+  $("#upvoteBtn").click(function() {
+      window.location = $(this).data("href");
+  });
+
+  $("#downvoteBtn").click(function() {
+      window.location = $(this).data("href");
+  });
+});
+</script>
+
+
 <div class="card mx-auto shadow-2-strong bg-white rounded" style="width: 60%; margin: 50px; padding: 50px;">
     <h3>Job Review Information</h3>
     <br>
@@ -45,8 +60,23 @@
             <td>Recommendation</td>
             <td>{{ entry.recommendation }}/10</td>
           </tr>
+          <tr>
+            <td>Votes</td>
+            <td>{{ entry.upvote }}</td>
+          </tr>
+          <tr>
+            <td><button class='arrow-up' id="upvoteBtn" data-href="/upvote/{{ entry.id }}"></button></td>
+            <td>Upvote</td>
+         
+          </tr>
+          <tr>
+            <td><button id="downvoteBtn" data-href="/downvote/{{ entry.id }}" class='arrow-down'></button></td>
+            <td>Downvote</td>
+          </tr>
         </tbody>
       </table>
+      
+      
       <br>
       </div>
 {% endblock %}
