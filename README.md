@@ -12,7 +12,7 @@ This is a Flask App for NCSU Campus Job Review System with SQL database for stor
 <a href="https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/graphs/contributors" alt="Contributors"><img src="https://img.shields.io/github/contributors/ashishjoshi2605/ncsu-campus-jobs-review-system" /></a>
 <a href="https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system" alt="Repo Size"><img src="https://img.shields.io/github/repo-size/ashishjoshi2605/ncsu-campus-jobs-review-system" /></a>
 <a href="https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/blob/main/LICENSE" alt="License"><img src="https://img.shields.io/github/license/ashishjoshi2605/ncsu-campus-jobs-review-system" /></a>
-<a href="https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/issues" alt="Open Issues"><img src="https://img.shields.io/github/issues-raw/ashishjoshi2605/ncsu-campus-jobs-review-system" /></a>
+<a href="https://github.com/kunalshah03/PackReview_Part2/issues" alt="Open Issues"><img src="https://img.shields.io/github/issues-raw/ashishjoshi2605/ncsu-campus-jobs-review-system" /></a>
 <a href="https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/actions" alt="Build Status"><img src="https://img.shields.io/github/workflow/status/ashishjoshi2605/ncsu-campus-jobs-review-system/Build%20main" /></a>
 <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/ashishjoshi2605/ncsu-campus-jobs-review-system/website?color=magenta&label=Documentation">
 
