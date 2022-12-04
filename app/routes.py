@@ -1,5 +1,6 @@
 from flask import render_template, request, redirect, session
 from flask_restful import Resource, reqparse
+from flask_paginate import Pagination, get_page_args
 from app import app, db
 from app.models import Reviews
 from utils import get_DB
@@ -60,7 +61,28 @@ def page_content():
     location_filter_entries = jobsDB.distinct("locations")
     title_filter_entries = jobsDB.distinct("title")
     company_filter_entries = jobsDB.distinct("company")
-    return render_template('page_content.html', entries=entries,dept_filter_entries=dept_filter_entries,location_filter_entries=location_filter_entries,company_filter_entries=company_filter_entries)
+    
+        #pagination
+        
+    print(entries)
+    page, per_page, offset = get_page_args(page_parameter="page", per_page_parameter="per_page")
+    total = len(entries)
+    
+    if not page or not per_page:
+        offset = 0
+        per_page = 10
+        pagination_entries = entries[offset: offset+per_page]
+    else:
+        pagination_entries = entries[offset: offset+per_page]
+        #print("ELSE!!!")
+
+    pagination = Pagination(page=page, per_page=per_page,
+                            total=total, css_framework = 'bootstrap4')
+    
+    #
+    # print("HERE!!!", pagination._get_single_page_link())
+    #return render_template('page_content.html', entries=pagination_entries, page=page, per_page=per_page, pagination=pagination)
+    return render_template('page_content.html', entries=pagination_entries, page=page, per_page=per_page, pagination=pagination,dept_filter_entries=dept_filter_entries,location_filter_entries=location_filter_entries,company_filter_entries=company_filter_entries)
 
 
 #view all
@@ -70,6 +92,7 @@ def myjobs():
     intializeDB()
     entries = get_my_jobs(session['username'])
     return render_template('myjobs.html', entries=entries)
+
 
 #search
 @app.route('/pageContentPost', methods=['POST'])
@@ -122,7 +145,11 @@ def page_content_post():
             print("company filter is", company_filter_title)
             entries = process_jobs(jobsDB.find({"company":  { "$in": company_filter_title} }))
 
-        return render_template('page_content.html', entries=entries, dept_filter_entries=dept_filter_entries, location_filter_entries=location_filter_entries, company_filter_entries=company_filter_entries)
+
+        return render_template('page_content.html', entries=entries,
+                               dept_filter_entries=dept_filter_entries,
+                               location_filter_entries=location_filter_entries, 
+                               company_filter_entries=company_filter_entries)
 
 @app.route('/')
 @app.route('/home')
