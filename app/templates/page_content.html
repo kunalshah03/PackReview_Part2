@@ -75,27 +75,75 @@ function showCheckboxes() {
 }
 </script>
 
-<form class="filter" action="/pageContentPost" method="post">
-  <input type="text" placeholder="Search.." name="search">
-  <button type="submit"><i class="fa fa-search"></i></button>
+        <form class="filter" action="/pageContentPost" method="post">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+            
+            <div style="display:block;">
+    <div class="multiselect">-->
+    <div class="selectBox" onclick="showCheckboxes()">
+        <select>
+            <option>Location</option>
+        </select>
+            <input type="checkbox" name= "location_filter" value="Raleigh, NC"><label> Raleigh, NC</label><br>
+        <input type="checkbox" name= "location_filter" value="California"><label> California</label>
 
-  <div style="display:block;">
-    <div class="multiselect">
-        <select name = "company_filter" class="form-control">
-          <option value="">Select Company</option>';
-          {% for entry in company_filter_entries %}
-              <option value="{{entry}}">{{entry}}</option>';    
-          {% endfor %}
-          </select>
 
-          <div class="container">
-            <h1> HERE!!!</h{{pagination.links}}
-           </div>
+        <select>
+            <option>Company</option>
+
+       </select>
+        {% for entry in company_filter_entries %}
+        <input type="checkbox" name= "company_filter" value="{{entry}}"> <label>{{entry}}</label><br>
+                {% endfor %}
+
    </div>
     </div>
-</form>
+</div>
+
+            
+            
+<!--            <div style="display:block">-->
+<!--            <div class="multiselect">-->
+<!--    <div class="selectBox" onclick="showCheckboxes()">-->
+<!--      <select>-->
+<!--        <option>Location</option>-->
+<!--      </select>-->
+<!--      <div class="overSelect"></div>-->
+<!--    </div>-->
+<!--    <div id="checkboxes">-->
+
+<!--    <div id="checkboxes2">-->
+
+<!--    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
 
+<div style="display:block;">
+    <div class="multiselect">
+      <div class="container">
+        HERE!!! {{pagination.links}}
+      </div>
+   
+   </div>
+    </div>
+</div>
+
+<!--            <div>-->
+<!--                {% for entry in location_filter_entries %}-->
+<!--                <input type="checkbox" name= "location_filter" value="{{entry}}"> {{entry}}-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                {% for entry in title_filter_entries %}-->
+<!--                <input type="checkbox" name= "title_filter" value="{{entry}}"> {{entry}}-->
+<!--                {% endfor %}-->
+<!--            </div>-->
+
+
+        </form>
         <br><br>
         <div style="background-color: white;">
             <table class="sortable table table-hover">
