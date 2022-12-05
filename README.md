@@ -15,6 +15,7 @@ This is a Flask App for NCSU Campus Job Review System with SQL database for stor
 <a href="https://github.com/kunalshah03/PackReview_Part2/issues" alt="Open Issues"><img src="https://img.shields.io/github/issues-raw/kunalshah03/PackReview_Part2" /></a>
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/kunalshah03/PackReview_Part2?style=plastic)
 <a href="https://github.com/kunalshah03/PackReview_Part2/actions" alt="Build Status"><img src="https://img.shields.io/github/workflow/status/kunalshah03/PackReview_Part2/Build%20main" /></a>
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kunalshah03/PackReview_Part2)
 
 
 ## Pre-requisites
