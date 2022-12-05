@@ -5,16 +5,13 @@ This is a Flask App for NCSU Campus Job Review System with SQL database for stor
 ![alt text](https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/blob/main/app/static/ProjectUI.png)
 
 
-
-
-
 <a href="https://zenodo.org/badge/latestdoi/545210740"><img src="https://zenodo.org/badge/545210740.svg" alt="DOI"></a>
-<a href="https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/graphs/contributors" alt="Contributors"><img src="https://img.shields.io/github/contributors/ashishjoshi2605/ncsu-campus-jobs-review-system" /></a>
-<a href="https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system" alt="Repo Size"><img src="https://img.shields.io/github/repo-size/ashishjoshi2605/ncsu-campus-jobs-review-system" /></a>
-<a href="https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/blob/main/LICENSE" alt="License"><img src="https://img.shields.io/github/license/ashishjoshi2605/ncsu-campus-jobs-review-system" /></a>
+<a href="https://github.com/kunalshah03/PackReview_Part2/graphs/contributors" alt="Contributors"><img src="https://img.shields.io/github/contributors/kunalshah03/PackReview_Part2" /></a>
+<a href="https://github.com/kunalshah03/PackReview_Part2" alt="Repo Size"><img src="https://img.shields.io/github/repo-size/kunalshah03/PackReview_Part2" /></a>
+<a href="https://github.com/kunalshah03/PackReview_Part2/blob/main/LICENSE" alt="License"><img src="https://img.shields.io/github/license/kunalshah03/PackReview_Part2" /></a>
 <a href="https://github.com/kunalshah03/PackReview_Part2/issues" alt="Open Issues"><img src="https://img.shields.io/github/issues-raw/kunalshah03/PackReview_Part2" /></a>
-<a href="https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/actions" alt="Build Status"><img src="https://img.shields.io/github/workflow/status/ashishjoshi2605/ncsu-campus-jobs-review-system/Build%20main" /></a>
-<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/ashishjoshi2605/ncsu-campus-jobs-review-system/website?color=magenta&label=Documentation">
+<a href="https://github.com/kunalshah03/PackReview_Part2/actions" alt="Build Status"><img src="https://img.shields.io/github/workflow/status/kunalshah03/PackReview_Part2/Build%20main" /></a>
+<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/kunalshah03/PackReview_Part2/website?color=magenta&label=Documentation">
 
 ## Pre-requisites
 To run these scripts, you will require Python installed on your PC. Please visit [Python Installers](https://www.python.org/downloads/) to download the lastest python version. Apart from that, other requirements can be installed with the help of requirements.txt.
@@ -26,10 +23,10 @@ To check whether you have python installed or not, you can open CMD or a Termina
 
 If this is not the case, then you need to download python installer package from [Python Installers](https://www.python.org/downloads/) based on your system's operating system and install it and you can further clone this repository to execute the scripts.
 
-You can refer [INSTALL.md](https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/blob/main/INSTALL.md) for the complete installation steps based on your OS.
+You can refer [INSTALL.md](https://github.com/kunalshah03/PackReview_Part2/blob/main/INSTALL.md) for the complete installation steps based on your OS.
 
 ## Poster
-![alt text](https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/blob/main/app/static/Poster.jpg)
+![alt text](https://github.com/kunalshah03/PackReview_Part2/blob/main/app/static/Poster.jpg)
 
 ## Contribution Code of Conduct
 
@@ -42,11 +39,11 @@ The rules listed below are to be followed by the ones who will be contributing t
   
 ### Code Coverage Screenshot
 
-![alt text](https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/blob/main/Data/codecov.png)
+![alt text](https://github.com/kunalshah03/PackReview_Part2/blob/main/Data/codecov.png)
 
 ### Slack Channel Screenshot
 
-![alt text](https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/blob/main/Data/slack_channel.png)
+![alt text](https://github.com/kunalshah03/PackReview_Part2/blob/main/Data/slack_channel.png)
 
 ### Video demonstrating the existing functionalities
 https://user-images.githubusercontent.com/60925790/205466046-2b583692-3d3e-428d-b13f-aa0da9a51bce.mp4
