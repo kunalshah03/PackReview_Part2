@@ -64,7 +64,7 @@ def page_content():
     
         #pagination
         
-    print(entries)
+    #print(entries)
     page, per_page, offset = get_page_args(page_parameter="page", per_page_parameter="per_page")
     total = len(entries)
     
@@ -91,7 +91,21 @@ def myjobs():
     """An API for the user to view all the reviews created by them"""
     intializeDB()
     entries = get_my_jobs(session['username'])
-    return render_template('myjobs.html', entries=entries)
+    page, per_page, offset = get_page_args(page_parameter="page", per_page_parameter="per_page")
+    total = len(entries)
+    
+    if not page or not per_page:
+        offset = 0
+        per_page = 10
+        pagination_entries = entries[offset: offset+per_page]
+    else:
+        pagination_entries = entries[offset: offset+per_page]
+        #print("ELSE!!!")
+
+    pagination = Pagination(page=page, per_page=per_page,
+                            total=total, css_framework = 'bootstrap4')
+    
+    return render_template('myjobs.html', entries=pagination_entries, page=page, per_page=per_page, pagination=pagination)
 
 
 #search
@@ -144,12 +158,24 @@ def page_content_post():
         elif company_filter_title and not dept_filter_title:
             print("company filter is", company_filter_title)
             entries = process_jobs(jobsDB.find({"company":  { "$in": company_filter_title} }))
+        page, per_page, offset = get_page_args(page_parameter="page", per_page_parameter="per_page")
+        total = len(entries)
+    
+        if not page or not per_page:
+            offset = 0
+            per_page = 10
+            pagination_entries = entries[offset: offset+per_page]
+        else:
+            pagination_entries = entries[offset: offset+per_page]
+            #print("ELSE!!!")
 
+        pagination = Pagination(page=page, per_page=per_page,
+                            total=total, css_framework = 'bootstrap4')
 
-        return render_template('page_content.html', entries=entries,
+        return render_template('page_content.html', entries=pagination_entries,
                                dept_filter_entries=dept_filter_entries,
                                location_filter_entries=location_filter_entries, 
-                               company_filter_entries=company_filter_entries)
+                               company_filter_entries=company_filter_entries, page=page, per_page=per_page, pagination=pagination)
 
 @app.route('/')
 @app.route('/home')
