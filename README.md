@@ -9,7 +9,7 @@ This is a Flask App for NCSU Campus Job Review System with SQL database for stor
 <a href="https://github.com/kunalshah03/PackReview_Part2/graphs/contributors" alt="Contributors"><img                                                                 src="https://img.shields.io/github/contributors/kunalshah03/PackReview_Part2" /></a>
 ![Lint Python](https://github.com/amisha-w/PackTravel/actions/workflows/pylint.yml/badge.svg)
 ![Python Style Checker](https://github.com/amisha-w/PackTravel/actions/workflows/python_style_checker.yml/badge.svg)
-[![Total Lines](https://img.shields.io/tokei/lines/github/kunalshah03/PackReview_Part2?style=for-the-badge)](https://img.shields.io/tokei/lines/github/kunalshah03/PackReview_Part2)
+[![Total Lines](https://img.shields.io/tokei/lines/github/kunalshah03/PackReview_Part2)](https://img.shields.io/tokei/lines/github/kunalshah03/PackReview_Part2)
 <a href="https://github.com/kunalshah03/PackReview_Part2" alt="Repo Size"><img src="https://img.shields.io/github/repo-size/kunalshah03/PackReview_Part2" /></a>
 <a href="https://github.com/kunalshah03/PackReview_Part2/blob/main/LICENSE" alt="License"><img src="https://img.shields.io/github/license/kunalshah03/PackReview_Part2" /></a>
 <a href="https://github.com/kunalshah03/PackReview_Part2/issues" alt="Open Issues"><img src="https://img.shields.io/github/issues-raw/kunalshah03/PackReview_Part2" /></a>
