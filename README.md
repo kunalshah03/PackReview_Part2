@@ -58,6 +58,13 @@ https://user-images.githubusercontent.com/60925790/205466046-2b583692-3d3e-428d-
 ### Video demonstarting the new functionalities
 https://user-images.githubusercontent.com/60925790/205790268-41892a26-7dfa-4d52-a326-848212b1e4fe.mp4
 
+# Quick look to the newly added features
+
+## Getting started
+* Comprehensive Filters for Customized View: The reviews are distinctly filtered out based on the categories of location and company which enhances the user experience in viewing the desired reviews.
+* Optimized the server processing performance using Pagination feature: The significant server traffic control and latency is constrained in limits using the pagination strategies.
+* Powerful Querying and Analytics using MongoDB: The MongoDB query facilitates query deep into documents and performs complex analytics pipelines with minimal resources.
+
 ## Roadmap
 * [List of Roadmap and their corresponding open issues](https://github.com/kunalshah03/PackReview_Part2/issues)
 ## Team Members - Project 2
