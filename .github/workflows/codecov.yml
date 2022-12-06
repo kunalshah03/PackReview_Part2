@@ -25,6 +25,6 @@ jobs:
       run: |
           pytest --cov=./ --cov-report=xml
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
+      uses: codecov
       with:
         token: ec54988c-1c5c-4f4e-b427-24309674c6c4
