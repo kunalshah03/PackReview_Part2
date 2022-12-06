@@ -28,7 +28,7 @@ To check whether you have python installed or not, you can open CMD or a Termina
 
 If this is not the case, then you need to download python installer package from [Python Installers](https://www.python.org/downloads/) based on your system's operating system and install it and you can further clone this repository to execute the scripts.
 
-You can refer [INSTALL.md](https://github.com/kunalshah03/PackReview_Part2/blob/main/INSTALL.md) for the complete installation steps based on your OS.
+You can refer [INSTALL.md](https://github.com/kunalshah03/PackReview_Part2/blob/main/install.md) for the complete installation steps based on your OS.
 
 ## Poster
 ![alt text](https://github.com/kunalshah03/PackReview_Part2/blob/main/app/static/Poster.jpg)
