@@ -64,6 +64,7 @@ https://user-images.githubusercontent.com/60925790/205790268-41892a26-7dfa-4d52-
 * Comprehensive Filters for Customized View: The reviews are distinctly filtered out based on the categories of location and company which enhances the user experience in viewing the desired reviews. The advanced search filter provides tightly-focused and incredibly faster means to zone in on their choices.
 * Optimized the server processing performance using Pagination feature: The significant server traffic control and latency is constrained in limits using the pagination strategies. Effective pagination strategies have been devised to smoothly render the data from the dense database which could potentially return millions and billions.
 * Powerful Querying and Analytics using MongoDB: The MongoDB query facilitates to query deep into documents and performs complex analytics pipelines with minimal resources. It's flexible document schema integrated with rapid query operations offer a significant performance boost when compared to the previously used traditional databases.
+* Scaled to serve diverse groups: The application is made versatitle by many folds to cater to all purposes of job search. It provides an extensive and anonymous job review platform to all the career communities in addition to NCSU enterprises.
 
 ## Roadmap
 * [List of Roadmap and their corresponding open issues](https://github.com/kunalshah03/PackReview_Part2/issues)
