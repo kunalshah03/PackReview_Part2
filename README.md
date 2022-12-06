@@ -43,12 +43,13 @@ The rules listed below are to be followed by the ones who will be contributing t
   
 ### Code Coverage Screenshot
 
-![alt text](https://github.com/kunalshah03/PackReview_Part2/blob/main/Data/codecov.png)<img width="960" alt="Screenshot (37)" src="https://user-images.githubusercontent.com/60925790/205790581-126d0def-b513-45f3-8f88-ad6a3a802429.png">
+![alt text](https://github.com/kunalshah03/PackReview_Part2/blob/main/Data/codecov.png)
 
 
 ### Slack Channel Screenshot
 
-![image](https://user-images.githubusercontent.com/111834635/205785540-0aac9ea9-8809-4da3-bf47-7ac43e4e6cd3.png)
+![WhatsApp Image 2022-12-05 at 9 05 34 PM](https://user-images.githubusercontent.com/111834635/205791376-6dc27993-f39e-4737-b5b8-2219ac74df60.jpeg)
+
 
 ### Video demonstrating the existing functionalities
 https://user-images.githubusercontent.com/60925790/205466046-2b583692-3d3e-428d-b13f-aa0da9a51bce.mp4
