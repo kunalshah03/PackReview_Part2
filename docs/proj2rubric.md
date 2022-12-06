@@ -1,9 +1,9 @@
-|Notes|Assessment (Total : )|Evidence|
+|Notes|Assessment (Total : 87 )|Evidence|
 |-----|---------|----------|
 |Video1| 3| A video showing the functionality of the previous project is included in [README.md](https://github.com/kunalshah03/PackReview_Part2/blob/main/README.md) |
 |Video2| 3| A vidoe of the updated and scaled app with the new functionalities is included in [README.md](https://github.com/kunalshah03/PackReview_Part2/blob/main/README.md) |
-|Bonus: Xfold improvement| | |
-|Docs: what: point descriptions of each class/function (in isolation)| | |
+|Bonus: Xfold improvement| 3 | Highlighted in [README.md](https://github.com/kunalshah03/PackReview_Part2/blob/main/README.md)|
+|Docs: what: point descriptions of each class/function (in isolation)| 3 | Mentioned in respective README.md inside the respective folders |
 |Use of style checkers | 3 | Pylint used|
 |Use of code formatters. | 3 | Pylint used|
 |Use of syntax checkers. | 3 | Pylint used|
