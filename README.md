@@ -52,6 +52,9 @@ The rules listed below are to be followed by the ones who will be contributing t
 ### Video demonstrating the existing functionalities
 https://user-images.githubusercontent.com/60925790/205466046-2b583692-3d3e-428d-b13f-aa0da9a51bce.mp4
 
+### Video demonstarting the new functionalities
+https://user-images.githubusercontent.com/60925790/205790268-41892a26-7dfa-4d52-a326-848212b1e4fe.mp4
+
 # Quick look to the newly added features
 
 ## Getting started
