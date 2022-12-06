@@ -5,15 +5,16 @@ This is a Flask App for NCSU Campus Job Review System with SQL database for stor
 ![alt text](https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/blob/main/app/static/ProjectUI.png)
 
 
-<a href="https://doi.org/10.5281/zenodo.7402242"><img src="https://zenodo.org/badge/545210740.svg" alt="DOI"></a>
-<a href="https://github.com/kunalshah03/PackReview_Part2/graphs/contributors" alt="Contributors"><img                                                                 src="https://img.shields.io/github/contributors/kunalshah03/PackReview_Part2" /></a>
-[![codecov](https://codecov.io/gh/kunalshah03/PackReview_Part2/branch/main/graph/badge.svg?token=HRFN97UEB7)](https://codecov.io/gh/kunalshah03/PackReview_Part2)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7402242.svg)](https://doi.org/10.5281/zenodo.7402242)
+<a href="https://github.com/kunalshah03/PackReview_Part2/graphs/contributors" alt="Contributors"><img src = "https://img.shields.io/github/contributors/kunalshah03/PackReview_Part2"/></a>
 ![Lint Python](https://github.com/amisha-w/PackTravel/actions/workflows/pylint.yml/badge.svg)
 ![Python Style Checker](https://github.com/amisha-w/PackTravel/actions/workflows/python_style_checker.yml/badge.svg)
 <a href="https://github.com/kunalshah03/PackReview_Part2" alt="Repo Size"><img src="https://img.shields.io/github/repo-size/kunalshah03/PackReview_Part2" /></a>
 <a href="https://github.com/kunalshah03/PackReview_Part2/blob/main/LICENSE" alt="License"><img src="https://img.shields.io/github/license/kunalshah03/PackReview_Part2" /></a>
 <a href="https://github.com/kunalshah03/PackReview_Part2/issues" alt="Open Issues"><img src="https://img.shields.io/github/issues-raw/kunalshah03/PackReview_Part2" /></a>
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/kunalshah03/PackReview_Part2?style=plastic)
 <a href="https://github.com/kunalshah03/PackReview_Part2/actions" alt="Build Status"><img src="https://img.shields.io/github/workflow/status/kunalshah03/PackReview_Part2/Build%20main" /></a>
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/kunalshah03/PackReview_Part2)
 
 
 ## Pre-requisites
@@ -44,10 +45,37 @@ The rules listed below are to be followed by the ones who will be contributing t
 
 ![alt text](https://github.com/kunalshah03/PackReview_Part2/blob/main/Data/codecov.png)
 
+
 ### Slack Channel Screenshot
 
-![alt text](https://github.com/kunalshah03/PackReview_Part2/blob/main/Data/slack_channel.png)
+![WhatsApp Image 2022-12-05 at 9 05 34 PM](https://user-images.githubusercontent.com/111834635/205791376-6dc27993-f39e-4737-b5b8-2219ac74df60.jpeg)
+
 
 ### Video demonstrating the existing functionalities
 https://user-images.githubusercontent.com/60925790/205466046-2b583692-3d3e-428d-b13f-aa0da9a51bce.mp4
+
+### Video demonstarting the new functionalities
+https://user-images.githubusercontent.com/60925790/205790268-41892a26-7dfa-4d52-a326-848212b1e4fe.mp4
+
+# Quick look to the newly added features
+
+## Getting started
+### Pre-requisites
+*
+*
+### Installations
+*
+*
+### Run Instructions
+*
+*
+## Roadmap
+* [List of Roadmap and their corresponding open issues](https://github.com/kunalshah03/PackReview_Part2/issues)
+## Team Members - Project 2
+* Amisha Waghela
+* Ameya Chavan
+* Aoishi Das
+* Kunal Shah
+* Swarnamalya M
+
 

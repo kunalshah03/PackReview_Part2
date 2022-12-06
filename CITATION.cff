@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Hello!! If you use this software, please cite it using the metadata from this file"
+title: "PackReview_Part2"
+authors:
+  - family-names: Chavan
+    given-names: Ameya
+  - family-names: Waghela
+    given-names: Amisha
+  - family-names: Das
+    given-names: Aoishi
+  - family-names: Shah
+    given-names: Kunal
+  - family-names: Mohan
+    given-names: Swarnamalya
+version: "1.0"
+date-released: "12/05/2022"
+doi: 10.5281/zenodo.7402242
