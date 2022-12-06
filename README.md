@@ -47,8 +47,30 @@ The rules listed below are to be followed by the ones who will be contributing t
 
 ### Slack Channel Screenshot
 
-![alt text](https://github.com/kunalshah03/PackReview_Part2/blob/main/Data/slack_channel.png)
+![image](https://user-images.githubusercontent.com/111834635/205785540-0aac9ea9-8809-4da3-bf47-7ac43e4e6cd3.png)
 
 ### Video demonstrating the existing functionalities
 https://user-images.githubusercontent.com/60925790/205466046-2b583692-3d3e-428d-b13f-aa0da9a51bce.mp4
+
+# Quick look to the newly added features
+
+## Getting started
+### Pre-requisites
+*
+*
+### Installations
+*
+*
+### Run Instructions
+*
+*
+## Roadmap
+* [List of Roadmap and their corresponding open issues](https://github.com/kunalshah03/PackReview_Part2/issues)
+## Team Members - Project 2
+* Amisha Waghela
+* Ameya Chavan
+* Aoishi Das
+* Kunal Shah
+* Swarnamalya M
+
 
