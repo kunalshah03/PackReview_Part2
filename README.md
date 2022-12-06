@@ -7,7 +7,7 @@ This is a Flask App for NCSU Campus Job Review System with SQL database for stor
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7402242.svg)](https://doi.org/10.5281/zenodo.7402242)
 <a href="https://github.com/kunalshah03/PackReview_Part2/graphs/contributors" alt="Contributors"><img                                                                 src="https://img.shields.io/github/contributors/kunalshah03/PackReview_Part2" /></a>
-[![codecov](https://codecov.io/gh/kunalshah03/PackReview_Part2/branch/main/graph/badge.svg?token=HRFN97UEB7)](https://codecov.io/gh/kunalshah03/PackReview_Part2)
+
 ![Lint Python](https://github.com/amisha-w/PackTravel/actions/workflows/pylint.yml/badge.svg)
 ![Python Style Checker](https://github.com/amisha-w/PackTravel/actions/workflows/python_style_checker.yml/badge.svg)
 <a href="https://github.com/kunalshah03/PackReview_Part2" alt="Repo Size"><img src="https://img.shields.io/github/repo-size/kunalshah03/PackReview_Part2" /></a>
