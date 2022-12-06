@@ -61,7 +61,7 @@ https://user-images.githubusercontent.com/60925790/205790268-41892a26-7dfa-4d52-
 # Quick look to the newly added features
 
 ## A Potential Game Changer
-* Comprehensive Filters for Customized View: The reviews are distinctly filtered out based on the categories of location and company which enhances the user experience in viewing the desired reviews.
+* Comprehensive Filters for Customized View: The reviews are distinctly filtered out based on the categories of location and company which enhances the user experience in viewing the desired reviews. The advanced search filter provides tightly-focused and incredibly faster means to zone in on their choices!
 * Optimized the server processing performance using Pagination feature: The significant server traffic control and latency is constrained in limits using the pagination strategies.
 * Powerful Querying and Analytics using MongoDB: The MongoDB query facilitates query deep into documents and performs complex analytics pipelines with minimal resources.
 
