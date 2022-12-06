@@ -24,7 +24,7 @@
 |Test cases are routinely executed| 3 |Test cases are executed|
 |The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up| 3 | File is present and clear instructions are available|
 |Issues are discussed before they are closed| 3 |Issues were discussed before closing|
-|Chat channel: exists| 3 | Slack channel exists [See here](https://github.com/amisha-w/PackTravel/tree/main/images/slack)|
+|Chat channel: exists| 3 | Slack channel exists [See here](https://github.com/kunalshah03/PackReview_Part2/blob/main/Data/Screenshot%20(37).png)|
 |Test cases: a large proportion of the issues related to handling failing cases.| 0 | No issues found|
 |Evidence that the whole team is using the same tools: everyone can get to all tools and files| 3 | Everyone has contributed to different files|
 |Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)| 3 | |
