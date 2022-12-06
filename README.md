@@ -58,18 +58,6 @@ https://user-images.githubusercontent.com/60925790/205466046-2b583692-3d3e-428d-
 ### Video demonstarting the new functionalities
 https://user-images.githubusercontent.com/60925790/205790268-41892a26-7dfa-4d52-a326-848212b1e4fe.mp4
 
-# Quick look to the newly added features
-
-## Getting started
-### Pre-requisites
-*
-*
-### Installations
-*
-*
-### Run Instructions
-*
-*
 ## Roadmap
 * [List of Roadmap and their corresponding open issues](https://github.com/kunalshah03/PackReview_Part2/issues)
 ## Team Members - Project 2
