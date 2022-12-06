@@ -26,10 +26,17 @@ def test_add_post_route():
     })
     assert response.status_code == 200
 
+def test_signup_route():
+    response = app.test_client().get('/signup')
+    assert response.status_code == 200
+
+def test_login_route():
+    response = app.test_client().get('/login')
+    assert response.status_code == 200
+
 def test_add_review_route():
     response = app.test_client().get('/review')
-    assert response.status_code == 200
-    
+    assert response.status_code == 200    
 
 def test_review_route():
     response = app.test_client().get('/pageContent')
