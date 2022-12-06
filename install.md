@@ -23,7 +23,7 @@ python --version
 git clone https://github.com/kunalshah03/PackReview_Part2.git
 ```
 ```
-cd ncsu-campus-jobs-review-system/
+cd PackReview_Part2/
 ```
 ```
 python -m venv venv
