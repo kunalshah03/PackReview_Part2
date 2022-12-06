@@ -16,11 +16,11 @@
 |Issues are being closed| 3 | A lot of issues were opened, resolved and closed [Visible in Issues](https://github.com/kunalshah03/PackReview_Part2/issues?q=is%3Aissue+is%3Aclosed) |
 |DOI badge: exists| 3 | Visible in [GitHub Repository](https://github.com/kunalshah03/PackReview_Part2) |
 |Docs: doco generated, format not ugly | 3 | Documentation is present with all the blings! [GitHub Repository README.md](https://github.com/kunalshah03/PackReview_Part2) |
-|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z| 3 |No such examples or tutorials found, README.md has the instructions on how to execute|
+|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z| 0 |No such examples or tutorials found|
 |Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing| 3 | Documentation includes the story, punchline and would motivate anyone to rush out and use the thing|
 |Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|  3| Animation video present in [GitHub Repository README.md](https://github.com/kunalshah03/PackReview_Part2)|
 |Use of version control tools| 3 | GitHub was used by the team|
-|Test cases exist| 3 |Test cases are present in tests folder. [see here](https://github.com/amisha-w/PackTravel/tree/main/user/tests)|
+|Test cases exist| 3 |Test cases are present in tests folder. [see here](https://github.com/kunalshah03/PackReview_Part2/tree/main/tests)|
 |Test cases are routinely executed| 3 |Test cases are executed|
 |The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up| 3 | File is present and clear instructions are available|
 |Issues are discussed before they are closed| 3 |Issues were discussed before closing|
